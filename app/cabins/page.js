@@ -9,7 +9,6 @@ export default async function Page() {
   // CHANGE
   console.log("cabins page");
   const cabins = await getCabins();
-  console.log(cabins);
 
   return (
     <div>
