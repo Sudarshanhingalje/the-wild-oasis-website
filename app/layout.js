@@ -1,6 +1,6 @@
 import Logo from "@/app/_components/Logo";
 import Navigation from "@/app/_components/Navigation";
-//Font
+
 import { Josefin_Sans } from "next/font/google";
 
 const josefin = Josefin_Sans({

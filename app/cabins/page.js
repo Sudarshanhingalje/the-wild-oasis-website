@@ -1,3 +1,4 @@
+import Counter from "@/app/_components/Counter";
 import CabinCard from "@/app/_components/CabinCard";
 
 export const metadata = {
