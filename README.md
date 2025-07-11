@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Wild Oasis – Customer-Facing Website 🌴
 
-## Getting Started
+This is a customer-facing frontend application for **The Wild Oasis**, a boutique hotel with 8 luxurious wooden cabins. The app allows users to explore cabin details and book their stays with ease.
 
-First, run the development server:
+## 🔗 Live Demo
+[Live Demo](https://the-wild-oasis-website-three-mocha.vercel.app/) 
+<br>
+[Project-Report](https://github.com/user-attachments/files/21150047/The_Wild_Oasis_Customer_Website_Report.docx))
 
+
+
+## 🛠 Tech Stack
+- **Frontend**: React.js, Styled Components, React Router
+- **State Management**: React Query
+- **Authentication & Backend**: Supabase
+- **Charts & UI**: Recharts, React Hot Toast, Date-fns, React Icons
+
+## 📁 Features
+- Browse and view all available cabins with their prices, photos, and capacity.
+- Book a stay by selecting check-in/check-out dates, number of guests, and breakfast option.
+- View detailed booking summary before confirmation.
+- Authenticate and manage your bookings through Supabase integration.
+
+## 💡 Pages
+- `/` → Home page showing cabins and intro
+- `/cabins` → All available cabins with images and prices
+- `/book/:cabinId` → Booking page for a specific cabin
+- `/confirmation` → Booking success confirmation page
+
+## 🧩 Future Enhancements
+- Payment gateway integration
+- Email confirmations
+- Booking history and cancellation options
+
+## ⚙️ Setup Instructions
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Sudarshanhingalje/the-wild-oasis-website.git
+cd the-wild-oasis-website
+npm install
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Preview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![App Screenshot](https://github.com/Sudarshanhingalje/the-wild-oasis-website/raw/main/assets/images/hero.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🔒 Built by Sudarshan Hingalje as a part of real-world frontend practice project.
