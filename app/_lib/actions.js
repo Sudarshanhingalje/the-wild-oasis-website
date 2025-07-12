@@ -28,6 +28,8 @@ export async function updateGuest(formData) {
   revalidatePath("/account/profile");
 }
 
+// *****************************************************************************************************
+
 export async function createBooking(bookingData, formData) {
   const session = await auth();
   if (!session) throw new Error("You must be logged in");
@@ -53,6 +55,8 @@ export async function createBooking(bookingData, formData) {
   redirect("/cabins/thankyou");
 }
 
+// *****************************************************************************************************
+
 export async function deleteBooking(bookingId) {
   const session = await auth();
   if (!session) throw new Error("You must be logged in");
@@ -72,6 +76,8 @@ export async function deleteBooking(bookingId) {
 
   revalidatePath("/account/reservations");
 }
+
+// *****************************************************************************************************
 
 export async function updateBooking(formData) {
   const bookingId = Number(formData.get("bookingId"));
