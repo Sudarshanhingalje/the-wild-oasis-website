@@ -1,13 +1,19 @@
-import CabinList from "@/app/_components/CabinList";
-import Spinner from "@/app/_components/Spinner";
 import { Suspense } from "react";
+import CabinList from "../_components/CabinList";
+import Spinner from "../_components/Spinner";
+import Counter from "../_components/Counter";
+import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
+
+export const revalidate = 3600;
+// export const revalidate = 15;
 
 export const metadata = {
   title: "Cabins",
 };
 
-export default async function Page() {
-  // CHANGE
+export default function Page({ searchParams }) {
+  const filter = searchParams?.capacity ?? "all";
 
   return (
     <div>
@@ -15,18 +21,21 @@ export default async function Page() {
         Our Luxury Cabins
       </h1>
       <p className="text-primary-200 text-lg mb-10">
-        Nestled amidst the serene hills of the Indian Western Ghats, these cozy
-        yet luxurious cottages offer the perfect blend of tradition and
-        tranquility. Wake up to misty sunrises, chirping birds, and breathtaking
-        valley views. Spend your day wandering through lush spice plantations,
-        or unwind in your private open-air jacuzzi under a starry sky.
-        Experience rustic charm with modern comforts – a true escape from city
-        life. &apos;Welcome to your peaceful haven in nature’s lap – where every
-        moment is a breath of fresh mountain air
+        Cozy yet luxurious cabins, located right in the heart of the Italian
+        Dolomites. Imagine waking up to beautiful mountain views, spending your
+        days exploring the dark forests around, or just relaxing in your private
+        hot tub under the stars. Enjoy nature&apos;s beauty in your own little
+        home away from home. The perfect spot for a peaceful, calm vacation.
+        Welcome to paradise.
       </p>
 
-      <Suspense fallback={<Spinner />}>
-        <CabinList />
+      <div className="flex justify-end mb-8">
+        <Filter />
+      </div>
+
+      <Suspense fallback={<Spinner />} key={filter}>
+        <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );

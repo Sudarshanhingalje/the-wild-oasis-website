@@ -2,9 +2,9 @@ import Spinner from "@/app/_components/Spinner";
 
 export default function Loading() {
   return (
-    <div className="grid justify-center items-center ">
+    <div className="grid items-center justify-center">
       <Spinner />
-      <p className="text-xl text-primary-200">Loading cabins...</p>
+      <p className="text-xl text-primary-200">Loading cabin data...</p>
     </div>
   );
 }
