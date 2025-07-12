@@ -13,8 +13,6 @@ const authConfig = {
     authorized({ auth, request }) {
       return !!auth?.user;
     },
-
-    //for prfile update
     async signIn({ user, account, profile }) {
       try {
         const existingGuest = await getGuest(user.email);

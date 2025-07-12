@@ -1,5 +1,6 @@
-import image1 from "@/public/about-1.jpg";
 import Image from "next/image";
+import image1 from "@/public/about-1.jpg";
+import image2 from "@/public/about-2.jpg";
 import { getCabins } from "../_lib/data-service";
 
 export const revalidate = 86400;
@@ -55,7 +56,6 @@ export default async function Page() {
           fill
           className="object-cover"
           alt="Family that manages The Wild Oasis"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
