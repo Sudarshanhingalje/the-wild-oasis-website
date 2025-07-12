@@ -11,7 +11,10 @@ export default function Page() {
         Sign in to access your guest area
       </h2>
 
-      <SignInButton />
+      <div className="flex flex-col gap-4">
+        <SignInButton provider="google" />
+        <SignInButton provider="github" />
+      </div>
     </div>
   );
 }

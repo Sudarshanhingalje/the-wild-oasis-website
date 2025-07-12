@@ -1,10 +1,10 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { auth, signIn, signOut } from "./auth";
 import { getBookings } from "./data-service";
 import { supabase } from "./supabase";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
 export async function updateGuest(formData) {
   const session = await auth();
@@ -120,6 +120,10 @@ export async function updateBooking(formData) {
 
 export async function signInAction() {
   await signIn("google", { redirectTo: "/account" });
+}
+
+export async function signInGithubAction() {
+  await signIn("github", { redirectTo: "/account" });
 }
 
 export async function signOutAction() {
