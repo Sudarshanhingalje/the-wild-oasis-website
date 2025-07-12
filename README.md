@@ -3,9 +3,9 @@
 This is a customer-facing frontend application for **The Wild Oasis**, a boutique hotel with 8 luxurious wooden cabins. The app allows users to explore cabin details and book their stays with ease.
 
 ## 🔗 Live Demo
-[Live Demo](https://the-wild-oasis-website-three-mocha.vercel.app/) 
+[Live Demo](https://the-wild-oasis-website-cabins.vercel.app/)
 <br>
-[Project-Report](https://github.com/user-attachments/files/21150047/The_Wild_Oasis_Customer_Website_Report.docx))
+[Project-Report](https://github.com/user-attachments/files/21150047/The_Wild_Oasis_Customer_Website_Report.docx)
 
 
 
