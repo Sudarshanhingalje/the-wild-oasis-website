@@ -1,30 +1,59 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
+
 import bg from "@/public/bg.png";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 export default function Page() {
+  const { width, height } = useWindowSize();
+  const [showConfetti, setShowConfetti] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowConfetti(false), 10000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <main className="mt-24">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
       <Image
         src={bg}
         fill
         placeholder="blur"
         quality={80}
-        className="object-cover object-top"
+        className="object-cover object-top z-0"
         alt="Mountains and forests with two cabins"
       />
 
-      <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
-          Welcome to paradise.
+      {/* Confetti */}
+      {showConfetti && (
+        <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={400}
+          recycle={false}
+          origin={{ x: 0.5, y: 0.5 }}
+        />
+      )}
+
+      {/* Content */}
+      <div className="z-10 text-center space-y-6 px-4">
+        <h1 className="text-4xl font-bold text-green-600 drop-shadow">
+          🎉 Reservation Confirmed!
         </h1>
+        <p className="text-lg text-muted-foreground">
+          Thank you for your reservation.
+        </p>
         <Link
-          href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+          href="/account/reservations"
+          className="underline text-xl text-accent-500 inline-block"
         >
-          Explore luxury cabins
+          Manage your reservations &rarr;
         </Link>
       </div>
-    </main>
+    </div>
   );
 }
