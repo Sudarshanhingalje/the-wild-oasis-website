@@ -8,6 +8,10 @@ This is a customer-facing frontend application for **The Wild Oasis**, a boutiqu
 [Project-Report](https://github.com/user-attachments/files/21150047/The_Wild_Oasis_Customer_Website_Report.docx)
 
 [the wild oasis website -page performance report (lighthouse).pdf](https://github.com/user-attachments/files/21333975/the.wild.oasis.website.-page.performance.report.lighthouse.pdf)
+<img width="1142" height="881" alt="Screenshot 2025-07-20 151520" src="https://github.com/user-attachments/assets/dbcecf9e-2293-4f49-bf8d-c5bdad72f41d" />
+
+## performance Report 
+<img width="1909" height="978" alt="Screenshot 2025-07-20 150749" src="https://github.com/user-attachments/assets/6b599e3f-a743-49c9-ba82-42c84ae921ab" />
 
 
 ## 🛠 Tech Stack
