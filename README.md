@@ -48,6 +48,9 @@ npm start
 ## 📸 Preview
 
 ![App Screenshot](https://github.com/Sudarshanhingalje/the-wild-oasis-website/raw/main/assets/images/hero.png)
+<img width="1912" height="974" alt="Screenshot 2025-07-20 151725" src="https://github.com/user-attachments/assets/3d21513e-7810-41e3-a0be-dbe5ff35cd17" />
+<img width="1909" height="965" alt="Screenshot 2025-07-20 151744" src="https://github.com/user-attachments/assets/ffb59506-6abe-4e04-82b0-f8444cd6b9d9" />
+<img width="1919" height="971" alt="Screenshot 2025-07-20 151800" src="https://github.com/user-attachments/assets/378f6b92-b811-4178-b5c7-b9f0119fb331" />
 
 ---
 
